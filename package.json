@@ -1,0 +1,11 @@
+{
+  "name": "react-framework-demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev-remix": "cd ./remix-2 && npm run dev"
+  },
+  "author": "Earle Poole",
+  "license": "ISC"
+}
