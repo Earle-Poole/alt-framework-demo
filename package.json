@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev-remix": "cd ./remix-2 && npm run dev"
+    "dev-remix": "cd ./remix-2 && npm run dev",
+    "dev-all": "node start.js"
   },
   "author": "Earle Poole",
   "license": "ISC"
