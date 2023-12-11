@@ -1,7 +1,7 @@
 const UserAccount = () => {
   return (
     <section>
-      <a>Log In</a>
+      <a href="/">Log In</a>
     </section>
   )
 }

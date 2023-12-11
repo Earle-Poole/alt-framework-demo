@@ -1,19 +1,27 @@
-import Logo from "../Logo"
-import NavLinks from "../NavLinks"
-import UserAccount from "../UserAccount"
+import CoreHeader from "./components/Header.Core"
+import LocalHeader from "./components/Header.Local"
+import ProHeader from "./components/Header.Pro"
 
-const Header = () => {
-  return (
-    <>
-      <header className="flex justify-center">
-        <nav className="flex flex-1 h-20 items-center px-4 w-full max-w-screen-xl">
-          <Logo />
-          <NavLinks />
-          <UserAccount />
-        </nav>
-      </header>
-    </>
-  )
+interface HeaderProps {
+  variant?: HeaderVariants
+}
+
+const Header = (props: HeaderProps) => {
+  const { variant, ...propsWithoutVariant } = props
+  switch (props.variant) {
+    case HeaderVariants.PRO:
+      return <ProHeader {...propsWithoutVariant} />
+    case HeaderVariants.LOCAL:
+      return <LocalHeader {...propsWithoutVariant} />
+    default:
+      return <CoreHeader {...propsWithoutVariant} />
+  }
 }
 
 export default Header
+
+export enum HeaderVariants {
+  CORE = "CORE",
+  PRO = "PRO",
+  LOCAL = "LOCAL",
+}

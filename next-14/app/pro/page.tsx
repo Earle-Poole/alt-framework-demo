@@ -1,7 +1,11 @@
-export default function ProPage() {
+export default function ProHomepage() {
   return (
-    <div>
-      <h1>Pro Page</h1>
+    <div className="flex flex-col py-16 gap-4">
+      <h1 className="text-4xl">Here&apos;s what matters in your industry.</h1>
+      <h2 className="text-lg">
+        Unlock exclusive stories, breaking news and trend analysis with Axios
+        Pro.
+      </h2>
     </div>
   )
 }

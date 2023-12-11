@@ -5,7 +5,7 @@ import Footer from "@/components/Footer"
 
 const inter = Inter({ subsets: ["latin"] })
 
-export default function Layout({ children }: React.PropsWithChildren) {
+export default async function Layout({ children }: React.PropsWithChildren) {
   return (
     <html lang="en">
       <body className={inter.className + " " + "bg-slate-50"}>
