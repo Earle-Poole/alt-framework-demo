@@ -31,11 +31,11 @@ export default function App() {
           <Meta />
           <Links />
         </head>
-        <body>
+        <body className="bg-slate-50">
           <Outlet />
           <Scripts />
-          <LiveReload />
           {/* Connects the app to the Remix asset server, and enables hot reload */}
+          <LiveReload />
         </body>
       </html>
     </Provider>
@@ -72,7 +72,7 @@ export function ErrorBoundary() {
         <Meta />
         <Links />
       </head>
-      <body>
+      <body className="bg-slate-50">
         This looks like an error
         <Scripts />
       </body>

@@ -17,7 +17,7 @@ export default async function Home() {
   )
   return (
     <>
-      <p>Here&apos;s some national stories and junk</p>
+      <p>Here&apos;s some stories and junk</p>
       {data.map((story) => {
         const storyPublishedDate = new Date(story.first_published)
         const storyLink = `/${storyPublishedDate.getFullYear()}/${

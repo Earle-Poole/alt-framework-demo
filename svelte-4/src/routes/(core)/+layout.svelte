@@ -1,15 +1,12 @@
 <script lang="ts">
-  // props passed from the load function
-  export let title;
-
-  console.log('title: ', $title)
+	import Footer from '@/components/Footer/Footer.svelte';
+	import Header from '@/components/Header/Header.svelte';
 </script>
 
-<!-- <Header /> -->
-Header!!!
+<Header />
 <main class="flex justify-center">
-  <section class="w-full max-w-screen-xl">
-    <slot />
-  </section>
+	<section class="w-full max-w-screen-xl">
+		<slot />
+	</section>
 </main>
-Footer!!!
+<Footer />
