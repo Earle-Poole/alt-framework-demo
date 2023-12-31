@@ -1,3 +1,4 @@
+import { cache } from "@/lib"
 import { jokeAtom } from "@/stores"
 import GlobalHydrator from "@/stores/GlobalHydrator"
 import { quoteAtom } from "@/stores/quote"
@@ -12,7 +13,7 @@ import {
   useLoaderData,
   useRouteError,
 } from "@remix-run/react"
-import stylesheet from "app/tailwind.css"
+import "app/tailwind.css"
 import { Provider } from "jotai"
 
 export default function App() {
@@ -43,23 +44,33 @@ export default function App() {
 }
 
 export const loader = async () => {
-  const jokeResponse = await fetch("https://icanhazdadjoke.com/", {
-    headers: { Accept: "application/json" },
-  })
-  const jokeJson = await jokeResponse.json()
+  let jokeJson, quoteJson
+  if (cache.has("jokeJson")) {
+    jokeJson = cache.get("jokeJson")
+  } else {
+    const jokeResponse = await fetch("https://icanhazdadjoke.com/", {
+      headers: { Accept: "application/json" },
+    })
+    jokeJson = await jokeResponse.json()
+    cache.set("jokeJson", jokeJson, 5)
+  }
 
-  const quoteResponse = await fetch("https://api.quotable.io/quotes/random", {
-    headers: { Accept: "application/json" },
-  })
+  if (cache.has("quoteJson")) {
+    quoteJson = cache.get("quoteJson")
+  } else {
+    const quoteResponse = await fetch("https://api.quotable.io/quotes/random", {
+      headers: { Accept: "application/json" },
+    })
 
-  const quoteJson = await quoteResponse.json()
+    quoteJson = await quoteResponse.json()
+    cache.set("quoteJson", quoteJson, 30)
+  }
 
   return json({ jokeJson, quoteJson })
 }
 
 export const links: LinksFunction = () => [
   { rel: "icon", href: "/favicon.ico", type: "image/png" },
-  { rel: "stylesheet", href: stylesheet },
 ]
 
 export function ErrorBoundary() {
