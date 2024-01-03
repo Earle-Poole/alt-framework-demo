@@ -5,7 +5,7 @@ import { Metadata } from "next"
 import Image from "next/image"
 
 export const metadata: Metadata = {
-  title: "Story Page",
+  title: "Next - Story Page",
 }
 
 interface StoryPageProps {

@@ -11,7 +11,7 @@ export const load = async () => {
 	);
 
 	return {
-		title: 'Hello!',
+		title: 'Svelte - National Page',
 		stories: fetchedContent
 	};
 };

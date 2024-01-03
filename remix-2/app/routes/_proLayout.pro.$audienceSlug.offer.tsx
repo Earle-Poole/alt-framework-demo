@@ -9,7 +9,7 @@ export default function ProOfferPage() {
 
 export const meta: MetaFunction = ({ params }) => {
   console.log("params in pro offer meta: ", params)
-  return [{ title: "Pro Offer Page" }]
+  return [{ title: "Remix - Pro Audience Offer Page" }]
 }
 
 export const loader: LoaderFunction = async ({ params }) => {

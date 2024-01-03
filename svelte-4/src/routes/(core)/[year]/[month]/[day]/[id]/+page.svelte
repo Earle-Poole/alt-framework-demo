@@ -7,6 +7,8 @@
 	const { story, params, jokeJson, quoteJson } = data;
 </script>
 
+<title>Svelte - Story Page</title>
+
 <section class="max-w-4xl mx-auto">
 	<JokeOfTheMoment joke={jokeJson} />
 	<QuoteOfTheMoment quotes={quoteJson} />

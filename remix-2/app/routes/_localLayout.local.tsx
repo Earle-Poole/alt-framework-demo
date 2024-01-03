@@ -1,3 +1,5 @@
+import { MetaFunction } from "@remix-run/react"
+
 export default function LocalHomepage() {
   return (
     <div>
@@ -15,4 +17,8 @@ export default function LocalHomepage() {
       </section>
     </div>
   )
+}
+
+export const meta: MetaFunction =  () => {
+  return [{ title: "Remix - Local Homepage" }]
 }

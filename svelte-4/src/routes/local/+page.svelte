@@ -1,3 +1,4 @@
+<title>Svelte - Local Homepage</title>
 <div>
 	<section class="flex">
 		<h1 class="flex flex-1 justify-center items-center text-8xl text-blue-800">Axios Local</h1>

@@ -19,7 +19,7 @@
 		<pre class="flex">Link: <a class="text-blue-600 hover:underline cursor-pointer" href={storyLink}
 				>{JSON.stringify(storyLink)}</a
 			>
-  </pre>
+  		</pre>
 	</div>
 	{'}'}<br />
 {/each}

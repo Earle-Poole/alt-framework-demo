@@ -17,5 +17,5 @@ export default function CoreLayout() {
 }
 
 export const meta: MetaFunction = () => {
-  return [{ title: "Landing" }]
+  return [{ title: "Remix - National Page" }]
 }

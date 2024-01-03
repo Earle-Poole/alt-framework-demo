@@ -40,7 +40,7 @@ export default function ProHomepage() {
 }
 
 export const meta: MetaFunction = () => {
-  return [{ title: "Story Page" }]
+  return [{ title: "Remix - Story Page"}]
 }
 
 export const loader: LoaderFunction = async ({ params }) => {

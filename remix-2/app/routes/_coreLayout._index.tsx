@@ -37,12 +37,6 @@ export default function Home() {
   )
 }
 
-export const meta: MetaFunction = () => {
-  return [
-    { title: "Axios - Breaking news, U.S. news and politics, and local news" },
-  ]
-}
-
 export async function headers() {
   return {
     "Cache-Control": "public, max-age=60, s-maxage=60",
